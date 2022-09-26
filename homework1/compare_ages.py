@@ -1,7 +1,8 @@
 # by Lei Wang
 # Student ID：52210762
 # 24/09/22 21:37
-#
+# github: https://github.com/wangleiz166/studyInAberdeen
+
 # Write a function called "compare_ages" without arguments that asks for the user's age and
 # responds by saying whether the user is the same age as you, younger or older (and by how
 # much)

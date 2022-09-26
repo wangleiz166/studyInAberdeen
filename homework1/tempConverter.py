@@ -1,111 +1,164 @@
 # by Lei Wang
 # Student ID：52210762
-# 24/09/22 23:53
-#
-# Write a program called ‘tempConverter.py’ to convert temperatures to and from Celsius,
-# Fahrenheit. To accomplish this, you need to create the following two functions that accept a
-# temperature degree as the only argument:
-# celToFah(temperature)
-# FahToCel(temperature)
-# In addition, you need to create another function called mainProgram() that asks the user for a
-# temperature scale (1 for Celsius and 2 for Fahrenheit) and returns the converted temperature to
-# the user. (15 Marks)
-# For example, if the user selects Celsius as the input temperature scale, the output would be:
-# >>> The temperature xxx in Celsius is equivalent to xxx in Fahrenheit.
-# Similarly, if the user selects Fahrenheit as the input temperature scale, the output would be:
-# >>> The temperature xxx in Fahrenheit s equivalent to xxx in Celsius.
+# 24/09/22 21:37
+# github: https://github.com/wangleiz166/studyInAberdeen
+
+# Write a function called "compare_ages" without arguments that asks for the user's age and
+# responds by saying whether the user is the same age as you, younger or older (and by how
+# much)
+# For example, if you are 18 years old the program should display on the screen the following:
+# "You are one year younger than me." (if input is 17)
+# "You are the same age as me." (if input is 18)
+# "You are 2 years older than me." (if input is 20)
+
+# Forever 18 years old
+my_age = 18
 
 # main function
 # parameter: no
 # return: no
-def mainProgram():
-    temperature_scale = input("please enter temperature scale (1 for Celsius and 2 for Fahrenheit):")
-    temperature = input("please enter temperature:")
+def compare_ages():
+    # get user age
+    user_age = input("please enter your age(0-120):")
 
     # Checking the legality of input
-    temperature_scale, temperature = checkInput(temperature_scale, temperature)
-    if temperature_scale == -1:
+    user_age = check_input(user_age)
+    if user_age == -1:
         return
 
-    if temperature_scale == 1:
-        # check Celsius temperature range
-        if temperature >= -273.15:
-            fah_temperature = celToFah(temperature)
-            #print(f"The temperature {temperature} in Celsius is equivalent to {round(fah_temperature,2)} in Fahrenheit")
-            print(
-                f"The temperature {temperature} in Celsius is equivalent to {fah_temperature} in Fahrenheit")
+    diff_age = my_age - user_age
+    diff_age_abs = abs(diff_age)
 
-        else:
-            print("Celsius temperature Must be (temperature >=-273.15) Please re-enter :")
-            return
+    year_str = "years"
+    age_type = ""
+
+    # same age
+    if diff_age == 0:
+        print("You are the same age as me.")
+        return
+
+    # younger age
+    elif diff_age > 0:
+        age_type = "younger"
+        if diff_age == 1:
+            diff_age = "one"
+            year_str = "year"
+
+    # older age
     else:
-        # check Fahrenheit temperature range
-        if temperature >= -459.67:
-            cel_temperature = FahToCel(temperature)
-            print(
-                f"The temperature {temperature} in Fahrenheit s equivalent to {cel_temperature} in Celsius")
-        else:
-            print("Celsius temperature Must be (temperature >=-459.67) Please re-enter :")
-            return
+        age_type = "older"
+        if diff_age_abs == 1:
+            diff_age_abs = "one"
+            year_str = "year"
+
+    print(f"You are {diff_age_abs} {year_str} {age_type} than me.")
 
 # function - Checking the legality of input
-# parameter: temperature_scale int , temperature int
+# parameter: user_age int
 # return: user_age int
-def checkInput(temperature_scale, temperature):
-    # check input not empty
-    if temperature_scale == "":
-        print("temperature scale cannot be empty ! Please re-enter:")
-        return -1, 0
+def check_input(user_age):
+    # check not ""
+    if user_age == "":
+        print("Age cannot be empty ! Please re-enter:")
+        return -1
 
-    if temperature == "":
-        print("temperature cannot be empty ! Please re-enter:")
-        return -1, 0
-
-    # check temperature_scale not string
     try:
-        temperature_scale = eval(temperature_scale)  # int or float
+        user_age = eval(user_age)
     except:
-        print("temperature scale cannot be string type ! Please re-enter")
-        return -1, 0
+        print("Age cannot be string type ! Please re-enter")
+        return -1
 
-    # check temperature_scale not float
-    if type(temperature_scale) != int:
-        print("temperature scale cannot be float type ! Please re-enter:")
-        return -1, 0
+    # must be int
+    if type(user_age) != int:
+        print("Age cannot be float type ! Please re-enter:")
+        return -1
+    #must (0<age<120)
+    if user_age < 0 or user_age > 120:
+        print("Wrong age range ! Please re-enter in (0-120):")
+        return -1
 
-    # check temperature_scale range
-    if temperature_scale not in [1, 2]:
-        print("Wrong temperature_scale range ! Please re-enter(1,2):")
-        return -1, 0
+    return user_age
 
-    # check temperature not string
+compare_ages()
+# by Lei Wang
+# Student ID：52210762
+# 24/09/22 21:37
+# github: https://github.com/wangleiz166/studyInAberdeen
+
+# Write a function called "compare_ages" without arguments that asks for the user's age and
+# responds by saying whether the user is the same age as you, younger or older (and by how
+# much)
+# For example, if you are 18 years old the program should display on the screen the following:
+# "You are one year younger than me." (if input is 17)
+# "You are the same age as me." (if input is 18)
+# "You are 2 years older than me." (if input is 20)
+
+# Forever 18 years old
+my_age = 18
+
+# main function
+# parameter: no
+# return: no
+def compare_ages():
+    # get user age
+    user_age = input("please enter your age(0-120):")
+
+    # Checking the legality of input
+    user_age = check_input(user_age)
+    if user_age == -1:
+        return
+
+    diff_age = my_age - user_age
+    diff_age_abs = abs(diff_age)
+
+    year_str = "years"
+    age_type = ""
+
+    # same age
+    if diff_age == 0:
+        print("You are the same age as me.")
+        return
+
+    # younger age
+    elif diff_age > 0:
+        age_type = "younger"
+        if diff_age == 1:
+            diff_age = "one"
+            year_str = "year"
+
+    # older age
+    else:
+        age_type = "older"
+        if diff_age_abs == 1:
+            diff_age_abs = "one"
+            year_str = "year"
+
+    print(f"You are {diff_age_abs} {year_str} {age_type} than me.")
+
+# function - Checking the legality of input
+# parameter: user_age int
+# return: user_age int
+def check_input(user_age):
+    # check not ""
+    if user_age == "":
+        print("Age cannot be empty ! Please re-enter:")
+        return -1
+
     try:
-        temperature = eval(temperature)
+        user_age = eval(user_age)
     except:
-        print("temperature cannot be string type ! Please re-enter")
-        return -1, 0
+        print("Age cannot be string type ! Please re-enter")
+        return -1
 
-    return temperature_scale, temperature
+    # must be int
+    if type(user_age) != int:
+        print("Age cannot be float type ! Please re-enter:")
+        return -1
+    #must (0<age<120)
+    if user_age < 0 or user_age > 120:
+        print("Wrong age range ! Please re-enter in (0-120):")
+        return -1
 
-# function make Celsius temperature to Fahrenheit temperature
-# F = (C*1.8)+32
-# parameter: temperature int / float
-# return: fah_value int / float
-def celToFah(temperature=0):
-    fah_value = temperature * 1.8 + 32
-    # format eg:50.0 => 50 or 33.333333333333333333 => 33.3333 or 50.199998 => 50.2
-    fah_value = '{:g}' .format(fah_value)
-    return fah_value
+    return user_age
 
-# function make Fahrenheit temperature to Celsius temperature
-# C = F-32/1.8
-# parameter: temperature int / float
-# return: cel_value int / float
-def FahToCel(temperature=0):
-    cel_value = (temperature - 32) / 1.8
-    # format eg:50.0 => 50 or 33.333333333333333333 => 33.3333 or 50.199998 => 50.2
-    cel_value = '{:g}' .format(cel_value)
-    return cel_value
-
-
-mainProgram()
+compare_ages()
