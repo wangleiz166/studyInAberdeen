@@ -1,6 +1,6 @@
 import string
 
-#加密解密方法：信息+偏移量 正负数都支持
+#加密解密方法：信息+偏移量 大小写 正负数都支持
 def caesar_encryption(info, offset):
     list = []
 
