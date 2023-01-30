@@ -43,13 +43,13 @@ def caesar_decrypt(info,offset):
     for i in info:
         index = list.index(str.upper(i))
         if i.islower(): 
-           decrypt_info +=  str.lower(az_Upper[index])
+           decrypt_info += str.lower(az_Upper[index])
         else:
-           decrypt_info +=  az_Upper[index]
+           decrypt_info += az_Upper[index]
     
     print(decrypt_info)
 
 
 
 #解密
-caesar_decrypt("XXXAAAbbb",3)
+caesar_decrypt("mpmoimrjsvqexmsrwigyvmxc",-1)
