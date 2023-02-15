@@ -24,12 +24,12 @@ Objects
     2.Procedures (functions) - which could manipulate the data //程序（函数）--可以对数据进行操作
     
 
-###How do we differentiate between different types of objects：Class
+### How do we differentiate between different types of objects：Class
     1.Used to describe objects //用于描述物体
     
     2.Like blueprints for creating an object //像创建一个物体的蓝图
 
-###Object-Oriented Concepts/Terminology  // 面向对象的概念/术语 
+### Object-Oriented Concepts/Terminology  // 面向对象的概念/术语 
 
     1.Fundamental building blocks are called	：classes //基本的构建模块被称为：类 
     
