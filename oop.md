@@ -1,6 +1,7 @@
 ### Key Principles of OOP  //OOP关键原则:
 
     1.Encapsulation& Information Hiding //封装&信息隐藏
+    
 			It must be possible to define a unit that contains data and the subprograms that access (manipulate) it.
 			//必须能够定义一个包含数据和访问（操作）数据的子程序的单元。
 			Hiding implementation details of an  object from things that interact with it.
@@ -9,10 +10,12 @@
 			//将外部视图（行为）与内部视图（状态）分开。
 	
     2.Abstraction //抽象
+    
 			An abstraction is a view or representation of an entity that includes only its most essential properties 
 			//抽象是一个实体的观点或代表，只包括其最基本的属性 
 	
     3.Inheritance //继承
+    
 			Subsumption provides the ability to create subclasses.
 			//子类提供了创建子类的能力。   
 			Subclasses share the structure and/or behaviour of the parent class.
@@ -21,6 +24,7 @@
 			//继承自一个类（单继承）或多个类（多继承）。
 			
     4.Association, Composition & Aggregation  //关联、组成和聚集
+    
 			Association
 			Simplest relationship.One class uses functionalities provided by another.
 			// 最简单的关系。一个类使用另一个类提供的功能。
@@ -32,6 +36,7 @@
 			//意味着一种关系，即子类可以独立于父类而存在
 			
 	5.Polymorphism //多态
+	
 			Method Overloading // 方法重载
 			A class with two or more methods having the same name, but different lists of arguments and different behaviours.
 			// 一个类有两个或多个名字相同的方法，但有不同的参数列表和不同的行为。
@@ -41,6 +46,7 @@
 
 	
 ### Method Overriding
+
 Besides inheriting methods as is, a class can modify an inherited method 
 //除了按原样继承方法外，一个类还可以修改继承的方法 
 The new one overrides the inherited one – this is method overriding
@@ -61,12 +67,14 @@ Objects
 	//面向对象的编程：用交互式对象的集合来模拟复杂系统的编程
 
 ### Elements of classical procedural (imperative) programming: //经典的程序性（命令式）编程的要素
+
     1.Data - which was completely passive //数据--这完全是被动的
     
     2.Procedures (functions) - which could manipulate the data //程序（函数）--可以对数据进行操作
     
 
 ### How do we differentiate between different types of objects：Class
+
     1.Used to describe objects //用于描述物体
     
     2.Like blueprints for creating an object //像创建一个物体的蓝图
@@ -107,12 +115,15 @@ Objects
 	//一个声明了方法但没有实现这些方法的类是：抽象类。
 
 ### Why OOP?
+
     1.Reusability//可重用性
     The same code should be usable as a component of different systems in various applications.
     //同样的代码应该可以在不同的应用中作为不同系统的组成部分使用。
+    
     2.Adaptability//适应性
     Software needs to be able to evolve over time in response to changing conditions in its environment.
     //软件需要能够随着时间的推移而发展，以应对其环境中不断变化的条件。
+    
     3.Robustness//稳健性
     We want software to be capable of handling unexpected inputs that are not explicitly defined for its application.
     //我们希望软件能够处理没有为其应用明确定义的意外输入。
