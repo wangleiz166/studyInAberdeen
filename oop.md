@@ -40,17 +40,17 @@
 			// 允许编写一个方法来接收某个类B的对象，但如果传递一个属于B的子类S的对象，该方法也能正常工作。
 
 	
-###Method Overriding
+### Method Overriding
 Besides inheriting methods as is, a class can modify an inherited method 
 //除了按原样继承方法外，一个类还可以修改继承的方法 
 The new one overrides the inherited one – this is method overriding
 //新的方法覆盖继承的方法--这就是方法覆盖
 
-###Multiple Inheritance
+### Multiple Inheritance
 Powerful mechanism to allow subclasses to inherit from multiple parents classes.
 //强大的机制，允许子类从多个父类继承。
 
-###	Objects in Software 
+### Objects in Software 
 Objects
     
     1.collection of data and associated behaviours //数据和相关行为的集合。
