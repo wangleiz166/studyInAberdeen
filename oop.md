@@ -15,5 +15,5 @@ Objects
     
     2.reusable software components that model real-world items //可重复使用的软件组件，用于模拟真实世界的项目。
     
-    3.Object-oriented programming ：Programming that models complex systems in terms ofa collection of interacting objects 
+    3.Object-oriented programming ：Programming that models complex systems in terms of a collection of interacting objects 
 	//面向对象的编程：用交互式对象的集合来模拟复杂系统的编程
