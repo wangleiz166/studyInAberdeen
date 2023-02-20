@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ali's music info</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        
+        body {
+            background-color: rgb(238, 238, 238);
+        }
+        
+        a {
+            color: black;
+        }
+        
+        .container {
+            margin: 0px 200px;
+            background-color: white;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 70px;
+        }
+        
+        img {
+            height: 100%;
+        }
+        
+        .top {
+            display: flex;
+            align-items: center;
+            background-color: #00e6a0;
+        }
+        
+        .letter {
+            padding-left: 15px;
+        }
+        
+        .bagpic {
+            height: 404.5px;
+            overflow: hidden;
+        }
+        
+        #nav>ul {
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        #nav>ul>li> {
+            width: 300px;
+            line-height: 72px;
+        }
+        
+        #nav>ul>li>a {
+            display: block;
+            Line-height: 72px;
+            color: black;
+            font-weight: 520;
+        }
+        
+        #nav>ul>li>a:hover {
+            background-color: #00e6a0;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .preference {
+            display: flex;
+            align-items: center;
+            background-color: white
+        }
+        
+        .pic1 {
+            width: 600px;
+            height: 300px;
+        }
+        
+        .album {
+            /* background-color: rgb(238, 238, 238); */
+            padding-bottom: 50px;
+        }
+        
+        #list {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        
+        #list>li {
+            padding-top: 50px;
+            height: 150px;
+        }
+        
+        .mv {
+            display: flex;
+            align-items: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            justify-content: space-around;
+            background-color: #e1f4ef;
+        }
+        
+        audio {
+            width: 140px;
+            height: 20px;
+        }
+        /* #list>li {
+      float: left;
+    }
+
+    #list>li>a {} */
+        /* .banner_box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    } */
+        /* #banner {
+      margin-top: 10px;
+      width: 520px;
+      height: 210px;
+      background-color: black;
+    } */
+    </style>
+</head>
+
+<body>
+    <!-- 最外层 -->
+    <div class="container">
+        <!-- logo区 -->
+        <div class="top">
+            <div class="logo"><img src="https://img2.baidu.com/it/u=4133923058,3469383984&fm=253&fmt=auto&app=138&f=PNG?w=499&h=375" alt="">
+            </div>
+            <div>
+                <p>Here is Grace's music center ~</p>
+            </div>
+        </div>
+        <!-- 一张背景图片 -->
+        <div class="bagpic"><img src="http://p1.music.126.net/3QBBVhUepj3piGFs3BilFg==/109951168255861365.jpg?imageView&quality=89" alt="music">
+        </div>
+        <!-- 导航栏 -->
+        <div id="nav">
+            <ul class="navList">
+                <li class="choose"><a>Music preference</a></li>
+                <li><a>Recommend the video</a></li>
+                <li><a>Favorite music album</a></li>
+            </ul>
+
+        </div>
+        <!-- 导航栏下面的内容 -->
+        <div class="content">
+            <!-- 个人偏好 -->
+            <div class="preference">
+                <span class="letter">
+                    <h2>My music preference</h2>
+                    <p id="a">
+                        When I first saw this song I thought it was such a coincidence that it was really Ross and Rachel, and only after reading the synopsis did I realise that it was a song based on them eh. The lyrics and tune are so gentle and tender, it's like I can already
+                        feel the luck of not giving up. I think of 'Old Friends', I really love it, the distinctive Ross and Rachel.
+                    </p><br>
+                    <p>
+                        My favorite singer is:<a href="https://en.wikipedia.org/wiki/Rihanna" style="color: #00e6a0" target="_blank">
+              Rihanna </a>
+                    </p>
+
+                  </span>
+                <span class="pic1">
+                    <img src="https://img0.baidu.com/it/u=2579568957,360305385&fm=253&fmt=auto&app=138&f=JPEG?w=630&h=416" alt="">
+                </span>
+            </div>
+            <!-- 推荐视频 -->
+            <div style="display:none;">
+                <h2>I recommend the video：</h2>
+                <span class="mv">
+                    <iframe src="https://www.youtube.com/embed/NZKXkD6EgBk" width=" 40%" height="200px" frameborder="o" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <iframe src="https://www.youtube.com/embed/NZKXkD6EgBk" width=" 40%" height="200px" frameborder="o" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </span>
+            </div>
+            <!-- 专辑列表 -->
+            <div style="display:none;">
+                <h2>My favorite music album</h2>
+
+                <span class="album">
+                    <ul id="list">
+                        <li><img src="https://y.qq.com/music/photo_new/T002R300x300M000000mgNZn3wnfxI.jpg?max_age=2592000">
+                            <audio src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3" controls></audio>
+                        </li>
+                        <li><img src="https://y.qq.com/music/photo_new/T002R300x300M000002Iebny0edkfi.jpg?max_age=2592000"><audio src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3" controls></audio>
+                        </li>
+                        <li><img src="https://y.qq.com/music/photo_new/T002R300x300M000002HLSOn38Us6p.jpg?max_age=2592000" alt=""><audio src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3" controls></audio>
+                        </li>
+                        <li><img src="	https://y.qq.com/music/photo_new/T002R300x300M000003atSKN4bGDv0.jpg?max_age=2592000" alt=""><audio src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3" controls></audio>
+                        </li>
+                    </ul>
+                    </span>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        var lis = document.querySelector('.navList').querySelectorAll('li');
+        var divs = document.querySelector('.content').querySelectorAll('div')
+            //console.log(lis)
+
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].setAttribute('index', i);
+            lis[i].onclick = function() {
+                for (var i = 0; i < lis.length; i++) {
+                    lis[i].className = '';
+                }
+                this.className = 'choose';
+                var index = this.getAttribute('index');
+                for (var i = 0; i < divs.length; i++) {
+                    divs[i].style.display = 'none';
+
+                }
+                if (index == 0) {
+                    divs[index].style.display = 'flex';
+                } else {
+                    divs[index].style.display = 'block';
+                }
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

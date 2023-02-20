@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>chat by lei wang</title>
+    <!--introducing jquery-->
+    <script src="lib/js/jquery-1.10.2.min.js"></script>
+    <!--introducing bootstrap-->
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+    <!--introducing custom css-->
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--loginbox-->
+    <div class="login" id="loginBox">
+        <h2>UserLogin</h2>
+        <!--username box-->
+        <div class="form-group">
+            <label>UserName:</label>
+            <input type="text" class="form-control" id="loginUserName" placeholder="Please enter your username" value="">
+            <span class="nameTip">Name cannot be empty!</span>
+        </div>
+        <!--username box end-->
+        <!--selectavatar box-->
+        <div class="form-group">
+            <label>SelectAvatar:</label>
+            <ul class="row" id="login_avatar">
+                <li><img src="img/banma.png" alt="" /></li>
+                <li><img src="img/daxiang.png" alt="" /></li>
+                <li><img src="img/gouxiong.png" alt="" /></li>
+                <li><img src="img/haozi.png" alt="" /></li>
+                <li><img src="img/shizi.png" alt="" /></li>
+                <li><img src="img/tuzi.png" alt="" /></li>
+            </ul>
+            <span class="avatarTip">Avatar not yet selected!</span>
+        </div>
+        <!--selectavatar box end-->
+        <div class="button" id="loginSubmit">
+            <button type="submit" class="btn btn-primary mb-0">Login</button>
+        </div>
+    </div>
+    <!--loginbox end-->
+
+    <!--chatbox-->
+    <div class="container" id="containerBox" style="display: none;">
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card chat-app">
+                    <!--user list box-->
+                    <div id="plist" class="people-list">
+                        <div class="people-header">
+                            Online Member List
+                        </div>
+                        <ul class="list-unstyled chat-list mt-2 mb-0">
+                        </ul>
+                    </div>
+                    <!--user list box end-->
+                    <div class="chat">
+                        <!--system box-->
+                        <div class="system">
+                        </div>
+                        <!--system end-->
+                        <!--chat history box-->
+                        <div class="chat-history" id="chatHistory">
+                            <ul class="m-b-0" id="chatBox">
+                            </ul>
+                        </div>
+                        <!--chat history box end-->
+                        <!--send message box-->
+                        <div class="chat-message clearfix">
+                            <div class="input-group mb-0" id="sendBox">
+                                <button type="submit" class="btn btn-primary mb-0">Send</button>
+                                <input type="text" id="sendMessage" class="form-control" placeholder="Enter text here...">
+                            </div>
+                        </div>
+                        <!--send message box end-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--chatbox end-->
+
+    <!--Connecting to socketio-->
+    <script src="/socket.io/socket.io.js"></script>
+    <!--introducing js-->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

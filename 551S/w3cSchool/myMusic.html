@@ -1,0 +1,201 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <title>my music page</title>
+    <style>
+        body {
+            width: 60%;
+            height: 60%;
+            margin: 0px auto;
+            padding: auto 0px;
+            text-align: center;
+        }
+        
+        ul {
+            margin-left: 6px;
+            padding: 0px;
+            list-style-type: none;
+        }
+        
+        li {
+            height: 35px;
+            font-size: 21px;
+            cursor: pointer;
+            color: black;
+        }
+        
+        li:hover {
+            background-color: #31c27c;
+            color: #fff;
+        }
+        
+        #header {
+            background-color: #3dc8a1;
+            color: white;
+            text-align: center;
+            padding: 5px;
+        }
+        
+        #contact-title {
+            background-color: #3dc8a1;
+            color: white;
+            text-align: center;
+        }
+        
+        #nav {
+            line-height: 30px;
+            background-color: #eeeeee;
+            height: 300px;
+            width: 100px;
+            float: left;
+            padding: 5px;
+        }
+        
+        #left {
+            left: 150px;
+            width: 374px;
+            float: left;
+            padding: 10px;
+        }
+        
+        #right {
+            margin-top: 32px;
+            float: left;
+            margin-left: 50px;
+        }
+        
+        #p_text {
+            float: left;
+        }
+        
+        #mp3 {
+            margin-top: 10px;
+        }
+        
+        #contact {
+            background-color: rgb(155, 213, 219);
+            color: white;
+            clear: both;
+            text-align: center;
+            padding: 5px;
+        }
+        
+        #footer {
+            background-color: #999;
+            color: white;
+            clear: both;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://gw.alicdn.com/tfs/TB16CUKtfzO3e4jSZFxXXaP_FXa-680-390.png" height="300px" width="860px">
+    <div id="header">
+        <h1>My taste in music</h1>
+    </div>
+
+    <div id="nav">
+        <ul>
+            <li onclick="music1()">music1</li><br>
+            <li onclick="music2()">music2</li><br>
+            <li onclick="music3()">music3</li><br>
+        </ul>
+    </div>
+
+    <div id="left">
+        <h1 id="title_h">music1</h1>
+        <p align="left" id="p_text">
+            When I first saw this song I thought it was such a coincidence that it was really Ross and Rachel, and only after reading the synopsis did I realise that it was a song based on them eh. The lyrics and tune are so gentle and tender, it's like I can already
+            feel the luck of not giving up. I think of 'Old Friends', I really love it, the distinctive Ross and Rachel.
+        </p>
+    </div>
+    <div id="right">
+        <img src="img/T002R300x300M000000fYT0y2yJ7yI.webp" width="300" height="200" alt="music1" />
+        <div id="mp3">
+            <audio controls>
+                <source src="http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3" type="audio/mpeg">
+                <source src="/assets_tutorials/media/Loreena_Mckennitt_Snow_56bit.ogg" type="audio/ogg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div id="header">
+            <h1>contact me</h1>
+        </div>
+        <div style="margin:0 auto">
+            <form enctype="multipart/form-data" action="" method="post">
+                <table class="table table-dark">
+                    <tr>
+                        <td>name:&nbsp;&nbsp;<input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td>email:&nbsp;&nbsp;<input type="password" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender：</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="sex" value="male">male</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="sex" value="female">female</td>
+                    </tr>
+                    <tr>
+                        <td>What kind of music do you like:</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="genre[]" value="1">music1</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="genre[]" value="2">music2</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="genre[]" value="3">music3</td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-success">submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button type="reset" class="btn btn-danger">cancel</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div id="footer">
+        dev by wl 21/1/2023
+    </div>
+    <script>
+        function music1() {
+            document.getElementById("title_h").innerHTML = "music1"
+            document.getElementById("p_text").innerHTML = "When I first saw this song I thought it was such a coincidence that it was really Ross and Rachel, and only after reading the synopsis did I realise that it was a song based on them eh. The lyrics and tune are so gentle and tender, it's like I can already feel the luck of not giving up. I think of 'Old Friends', I really love it, the distinctive Ross and Rachel."
+            document.getElementById("right").innerHTML = "<img src=\"https://y.qq.com/music/photo_new/T002R300x300M000000fYT0y2yJ7yI.jpg?max_age=2592000\" width=\"300\" height=\"200\" alt=\"music1\"/><div id=\"mp3\"><audio controls><source src=\"http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3\" type=\"audio/mpeg\"><source src=\"/assets_tutorials/media/Loreena_Mckennitt_Snow_56bit.ogg\" type=\"audio/ogg\">Your browser does not support the audio tag.</audio></div>"
+        }
+
+        function music2() {
+            document.getElementById("title_h").innerHTML = "music2"
+            document.getElementById("p_text").innerHTML = "You may have just fallen asleep on the plane.You dream of dusky clouds, the solstice, the watery countryside, the palace, the undefeated lotus in the fire.You wake up, still in that reality, and you're angry, hurt, taunting, defiant, like the hero of Fight Club."
+            document.getElementById("right").innerHTML = "<img src=\"https://y.qq.com/music/photo_new/T002R300x300M000000gOf1F3iOicl.jpg?max_age=2592000\" width=\"300\" height=\"200\" alt=\"music2\"/><div id=\"mp3\"><audio controls><source src=\"http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3\" type=\"audio/mpeg\"><source src=\"/assets_tutorials/media/Loreena_Mckennitt_Snow_56bit.ogg\" type=\"audio/ogg\">Your browser does not support the audio tag.</audio></div>"
+        }
+
+        function music3() {
+            document.getElementById("title_h").innerHTML = "music3"
+            document.getElementById("p_text").innerHTML = "You want to live and remember the world, a world that is dreamy and beautiful, where the sun burns and life grows and wanders free.A dream is a dream in the sense that it is so bright and beautiful.And the colours fade, you cry out to catch the memories, the people, how you can't catch them, black, white, torn but without pain"
+            document.getElementById("right").innerHTML = "<img src=\"https://y.qq.com/music/photo_new/T002R300x300M000002mZxCu21vAeZ.jpg?max_age=2592000\" width=\"300\" height=\"200\" alt=\"music3\"/><div id=\"mp3\"><audio controls><source src=\"http://www.170mv.com/kw/other.web.rj01.sycdn.kuwo.cn/resource/n3/2/63/3890495760.mp3\" type=\"audio/mpeg\"><source src=\"/assets_tutorials/media/Loreena_Mckennitt_Snow_56bit.ogg\" type=\"audio/ogg\">Your browser does not support the audio tag.</audio></div>"
+        }
+    </script>
+
+
+</body>
+
+</html>

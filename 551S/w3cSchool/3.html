@@ -1,0 +1,22 @@
+<html>
+
+<body>
+    <button onclick="change_text()">change text</button>
+    <p id='first_p'>my first p</p>
+    <script>
+        var text_value = "a"
+
+        function change_text() {
+            if (text_value == "a") {
+                document.getElementById("first_p").innerHTML = "i love ali";
+                text_value = "b"
+            } else {
+                document.getElementById("first_p").innerHTML = "i love wl";
+                text_value = "a"
+            }
+
+        }
+    </script>
+</body>
+
+</html>
