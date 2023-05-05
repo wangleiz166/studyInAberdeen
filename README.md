@@ -67,7 +67,7 @@ python manage.py test myapp
 ```
 
 # 例子：
-myapp_steps.py
+myapp_steps.py：
 ```python
 from behave import given, when, then
 from django.test import Client
@@ -110,7 +110,7 @@ def step_then_the_order_history_should_display_the_correct_orders_with_product_i
     assert context.order_response.status_code == 200
 
 ```
-myapp.feature
+myapp.feature：
 ```python
 Feature: Cart and Order Management
 
@@ -125,7 +125,7 @@ When the user accesses their order history
 Then the order history should display the correct orders with product information
 ```
 
-environment.py
+environment.py：
 ```python
 from behave import fixture, use_fixture
 from django.test import RequestFactory
