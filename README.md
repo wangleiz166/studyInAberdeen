@@ -18,11 +18,8 @@ TEST_RUNNER = 'behave_django.runner.BehaviorDrivenTestRunner'
 ```
 
 3. 在您的 Django manage.py平行创建一个名为 `features` 的目录，该目录将包含您的功能文件和步骤定义。
-
-例如，在名为 `myapp` 的应用程序中：
-
+目录结构如下：
 ```
-myapp/
     features/
         steps/
             __init__.py
@@ -60,10 +57,10 @@ def step_then_the_test_should_pass(context):
     pass
 ```
 
-6. 运行测试：
+6. 在根目录（manage.py所在目录）运行测试：
 
 ```
-python manage.py test myapp
+behave
 ```
 
 # 例子：
