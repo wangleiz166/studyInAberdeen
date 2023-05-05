@@ -66,7 +66,7 @@ def step_then_the_test_should_pass(context):
 python manage.py test myapp
 ```
 
-#例子：
+# 例子：
 myapp_steps.py
 ```python
 from behave import given, when, then
