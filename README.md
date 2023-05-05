@@ -168,6 +168,6 @@ def before_all(context):
 最后在manage.py所在目录执行behave就行了
 
 以下是返回结果：
-![example](https://raw.githubusercontent.com/用户名/my-repo/master/example.png)
+![example](https://github.com/wangleiz166/studyInAberdeen/blob/main/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230505125939.png)
 
 
