@@ -66,7 +66,7 @@ def step_then_the_test_should_pass(context):
 python manage.py test myapp
 ```
 
-例子：
+#例子：
 myapp_steps.py
 ```python
 from behave import given, when, then
@@ -168,24 +168,7 @@ def before_all(context):
 最后在manage.py所在目录执行behave就行了
 
 以下是返回结果：
-$ behave
-Creating test database for alias 'default'...
-Feature: Cart and Order Management # features/myapp.feature:1
+![example](https://raw.githubusercontent.com/用户名/my-repo/master/example.png)
 
-  Scenario: Accessing the Cart                                                 # features/myapp.feature:3
-    Given a user is logged in                                                  # features/steps/myapp_steps.py:11
-    When the user accesses their cart                                          # features/steps/myapp_steps.py:20
-    Then the cart should be displayed with the correct products and quantities # features/steps/myapp_steps.py:26
-
-  Scenario: Accessing Orders                                                          # features/myapp.feature:8
-    Given a user is logged in                                                         # features/steps/myapp_steps.py:11
-    When the user accesses their order history                                        # features/steps/myapp_steps.py:31
-    Then the order history should display the correct orders with product information # features/steps/myapp_steps.py:36
-
-Destroying test database for alias 'default'...
-1 feature passed, 0 failed, 0 skipped
-2 scenarios passed, 0 failed, 0 skipped
-6 steps passed, 0 failed, 0 skipped, 0 undefined
-Took 0m0.683s
 
 
