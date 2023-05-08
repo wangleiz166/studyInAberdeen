@@ -1,4 +1,4 @@
-## A. As the new person, you’re told that you’ll be working in two-week sprints. What does this look like in practice? 
+### A. As the new person, you’re told that you’ll be working in two-week sprints. What does this look like in practice? 
 
 Working in two-week sprints is a basic practice in Scrum. During the sprint, the development team needs to complete a set of tasks, with each task usually being completed within a day. 
 
@@ -7,21 +7,21 @@ Working in two-week sprints is a basic practice in Scrum. During the sprint, the
 
 So, as a new person, I need to actively participate in the sprint, understand the tasks and team goals, and work with other team members to complete tasks.
 
-## B. This application has a variety of different users. Which type of roles for user stories would you expect to see in the product backlog?
+### B. This application has a variety of different users. Which type of roles for user stories would you expect to see in the product backlog?
 
 1. Users - Scan codes and see how to recycle, get points and use coupons.
 2. Stores - Give coupons, get points from users, and watch how coupons are used.
 3. Recycling places - Share recycling info, keep data new and updated.
 4. App workers - Make, fix, and update the app.
 
-## C.The application compiles to both iOS and Android versions. Explain which issues you will need to monitor in your programming.
+### C.The application compiles to both iOS and Android versions. Explain which issues you will need to monitor in your programming.
 
 1. Compatibility issues: Since iOS and Android have different parts and setups, we need to make sure the app works well on both systems and devices.
 2. App performance issues: The app needs to run fast on phones and handle lots of data, so we must make sure it works well on different platforms.
 3. Platform-specific issues: For example, iOS and Android may have different safety rules. We need to learn and follow the safety needs for each system.
 4. User experience issues: On different platforms, the look and feel of the app might be different. We need to make sure the app has a good experience for users on all platforms.
 
-## D.Explain the likely architecture of this application.
+### D.Explain the likely architecture of this application.
 
 1. Client-side (Frontend) - Use React Native to make a mobile app that works on different devices, create the look of the app and talk to the server.
 2. Server-side (Backend) - Handle user requests, like getting recycling info, managing points, and coupons. Can use different tools like Node.js, Python, Java, PHP, or Golang.
