@@ -2,7 +2,7 @@
 
 Working in two-week sprints is a basic practice in Scrum. During the sprint, the development team needs to complete a set of tasks, with each task usually being completed within a day. 
 
-1. At the beginning of the sprint, the team focuses on the goals, starts tasks, performs development and testing, and then evaluates at the end of the sprint to check the completed work and the next steps.
+1. At the beginning of the sprint, the team focuses on the goals, starts tasks,  development and test, at the end of the sprint to check the completed work and the next steps.
 2. Throughout the sprint, team members often have daily stand-up meetings and other forms of cooperation to maintain team communication and cooperation.
 
 So, as a new person, I need to actively participate in the sprint, understand the tasks and team goals, and work with other team members to complete tasks.
