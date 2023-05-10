@@ -10,9 +10,13 @@
 
 
 1.Use a version control system like Git to manage code.
+
 2.Set up an automatic build system, such as npm, Jenkins.
+
 3.Write automated test cases, including unit tests, integration tests, and end-to-end tests, to ensure the correct functionality of the application.
+
 4.Configure automatic deployment tools, like Dockers, Kubernetes, to automatically deploy the built application to the production environment.
+
 5.Implement monitoring and alert mechanisms, so as to detect and solve problems in the application in time, such as ELK (Elasticsearch, Logstash, Kibana).
 
 # C. What role would testing play in the application?
