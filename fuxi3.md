@@ -5,8 +5,8 @@
 2.Coupling: Coupling is about how much parts of our system depend on each other. Low coupling means each part doesn't rely on the others too much. This makes our system easier to fix and grow. For example, if we get information through an interface, it doesn't matter if we change the database (like from MySQL to MongoDB), as long as the interface data stays the same.
 
 
-# B. What might you do to enable a continuous integration and continuous delivery
-pipeline for the application?
+# B. What might you do to enable a continuous integration and continuous delivery pipeline for the application?
+
 
 1.Use a version control system like Git to manage code.
 2.Set up an automatic build system, such as npm, Jenkins.
