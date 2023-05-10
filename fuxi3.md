@@ -1,8 +1,8 @@
 # A. Explain the role of coupling and cohesion between components. 
-先解释高内聚/内聚， 会使项目怎么样，根据场景举个例子，最后总结说应该使用高内聚
+### 先解释高内聚/内聚， 会使项目怎么样，根据场景举个例子，最后总结说应该使用高内聚
 1.Cohesion: High cohesion means in component ，one component does one job.  This makes our project code easier to read, fix, and reuse. For example：XXXXX.,so wo should try to use  High cohesion in project.
 
-先解释耦合，会使系统怎么样，根据场景举个例子，最后总结说应该使用低耦合
+### 先解释耦合，会使系统怎么样，根据场景举个例子，最后总结说应该使用低耦合
 2.Coupling: Coupling is about how much components depend on each other. Low coupling means each components doesn't depend on the others too much. This makes our project code easier to fix and grow. For example, if we get information through an interface, it doesn't matter if we change the database (like from MySQL to MongoDB), as long as the interface data stays the same.,so wo should try to use  low Coupling in project.
 
 
