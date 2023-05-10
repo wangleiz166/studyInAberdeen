@@ -11,26 +11,30 @@
 
 1.Use a version control system like Git to manage code.
 
-2.Set up an automatic build system, such as npm, Jenkins.
+2.Set up an auto build system, such as npm, Jenkins.
 
-3.Write automated test cases, including unit tests, integration tests, and end-to-end tests, to ensure the correct functionality of the application.
+3.Write auto test cases, including unit tests, integration tests, and end-to-end tests, to ensure the application work well.
 
-4.Configure automatic deployment tools, like Dockers, Kubernetes, to automatically deploy the built application to the production environment.
+4.Configure automatic deployment tools, like Dockers, Kubernetes, to auto deploy the built application to the environment.
 
-5.Implement monitoring and alert mechanisms, so as to detect and solve problems in the application in time, such as ELK (Elasticsearch, Logstash, Kibana).
+5. monitor and watch alarm, timely feedback problems in the application, such as ELK (Elasticsearch, Logstash, Kibana).
 
 # C. What role would testing play in the application?
 
-1.Verify the correctness of functions.
-2.Discover and fix defects.
+1.Verify the functions if right.
+
+2.Discover and fix .
+
 3.Improve software quality.
-4.Enhance user experience.
-5.Reduce maintenance costs.
+
+4.Improve user experience.
+
+5.Reduce fix costs.
 
 # D. Explain how you use retrospectives at the end of a sprint.
 
 1.Think about what happened in the last Sprint.
-2.Figure out why problems happened.
+2.Think about why problems happened.
 3.Make a plan to do better.
 4.Set goals and make a plan to reach them.
 5.Keep track of how we're doing.
