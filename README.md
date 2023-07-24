@@ -1,170 +1,105 @@
-要在 Django 项目中使用 Behave 进行测试，您需要遵循以下步骤：
+# TeachAdminBalancer User's Manual
 
-1. 安装 Behave 和 Django-Behave-Runner：
+This user manual is intended to familiarise users with the backend operations, and does not contain technical documentation or flowcharts.
+For more technical information, please see the panel report and readme.md.
 
-```
-pip install behave django-behave
-```
+Render:  https://teachadminbalancer-aberdeen.onrender.com
 
-2. 在您的 Django 项目的 `settings.py` 文件中，将 `'django_behave.runner.djangotestrunner'` 添加到您的测试运行器,还有INSTALLED_APPS：
+UserName: **admin**  
+PassWord: **123**
 
-```python
-INSTALLED_APPS = [
-     ...
-    'behave_django',
-]
+# Catalogue Introduction
 
-TEST_RUNNER = 'behave_django.runner.BehaviorDrivenTestRunner'
-```
+ 1. **StaffvModules**
+"StaffvModules" is a module for managing basic information about courses, programmes, administrative roles and school roles. The module provides a list of staff associated with each piece of information, as well as all the "HS" shared statistics associated with the staff member. In addition, "StaffvModules" provides a full-screen mode, which can be accessed with a double-click to easily modify basic information.
+ 
+ 3. **Staff**
+ "Staff" is a module used to maintain basic information about faculty and staff. It not only provides a comprehensive overview of staff information, but also allows users to associate and bind specific staff members to courses, programmes, administrative roles and school roles.
+ 
+ 4. **TotalWork**
+  The TotalWork module provides a comprehensive display of staff workload distribution and availability. All information displayed is based on real-time data from the system database.
+  
+ 5. **Course Infomation**
+ Visit the Course Information page to view a table containing details of various courses. The table displays the course categories and their corresponding parameter matches such as alpha, beta, and other relevant details.
+ 
+ 6. **User Management**
+ The user management module enables comprehensive management of users. It allows users to perform search queries and can view a user's recent activity history. In addition, the module provides functions such as adding new users, viewing the activity history of a specific user, editing user information, deleting users, and modifying user access rights, which ensures precise control of user information and user rights and meets diversified management needs.
+ 
+ 8. **Setting**
+User settings module, you can set the default permissions for the back-office administrator roles of Manager, Employee and IT Administrator.
 
-3. 在您的 Django manage.py平行创建一个名为 `features` 的目录，该目录将包含您的功能文件和步骤定义。
-目录结构如下：
-```
-    features/
-        steps/
-            __init__.py
-            myapp_steps.py
-        myapp.feature
-        environment.py
-```
+# Quick Guide
 
-4. 编写功能文件 (`.feature`)。功能文件使用 Gherkin 语言编写，描述了应用程序的期望行为。例如，在 `myapp.feature` 中：
+## 1.New staff
+Click on "add" in the upper right corner.
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230724033943.png?raw=true)
 
-```
-Feature: MyApp feature
+## 2.Edit and delete staff
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/3.png?raw=true)
 
-  Scenario: Basic test
-    Given I have a basic Django application
-    When I run a test
-    Then the test should pass
-```
+## 3.New Basic information on courses, programmes, administrative roles, school roles, etc.
+Click on "add" in the upper right corner.
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/20230724034529.png?raw=true)
 
-5. 编写对应的步骤定义。在 `myapp/features/steps/myapp_steps.py` 文件中，您需要定义与功能文件中描述的步骤匹配的 Python 函数。
+## 4.Editing and deleting basic information such as courses, programmes, administrative roles and school roles
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/4.png?raw=true)
 
-```python
-from behave import given, when, then
+## 5.View basic information about courses, programmes, administrative roles and school roles Corresponding staff-list
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/5.png?raw=true)
 
-@given('I have a basic Django application')
-def step_given_i_have_a_basic_django_application(context):
-    pass
+## 6.View and edit basic information such as courses, programmes, administrative roles and school roles Corresponding large screen version
 
-@when('I run a test')
-def step_when_i_run_a_test(context):
-    pass
+6.1 View the corresponding large screen version
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/6.png?raw=true)
+6.2 Double-click on the grid to edit it and save it
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/7.png?raw=true)
+6.3 Save Success Tip
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/8.png?raw=true)
 
-@then('the test should pass')
-def step_then_the_test_should_pass(context):
-    pass
-```
+## 7.Bind staff to courses, projects, admin roles and school roles
+7.1 In the staff module, click on the person's name
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/9.png?raw=true)
 
-6. 在根目录（manage.py所在目录）运行测试：
+7.2 Click "add new one" to add a new row of data, please fill in the code correctly.
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/10.png?raw=true)
 
-```
-behave
-```
+7.3 Total hours is automatically generated according to the formula 
+`Total_hours = credits * (alpha * delta + beta * numStudents) * share + coordinator`
+”remove“ will remove a line
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/11.png?raw=true)
 
-# 例子：
-myapp_steps.py：
-```python
-from behave import given, when, then
-from django.test import Client
-from user.models import User
-from django.contrib.auth.hashers import make_password
-import random
-import string
+7.4 Click "save" to save the binding information successfully
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/12.png?raw=true)
 
-def random_email():
-    return ''.join(random.choices(string.ascii_letters + string.digits, k=10)) + "@example.com"
+7.5 Total summary information
 
-@given('a user is logged in')
-def step_given_a_user_is_logged_in(context):
-    # Create a test user and log them in
-    User.objects.filter(name='admin-test').delete()
-    context.user = User.objects.create(name='admin-test', email=random_email(), password=make_password('123456'))
-    context.client = Client()  # Initialize Django test client
-    response = context.client.post('/user/login/', {'username': 'admin-test', 'password': '123456'})
-    assert response.status_code == 302
+       1.Total hours permitted = staff Details of "Adjusted Max"
+        
+       2.Total hours allocated = course total hours + project total hours + admin role total hours + school total hours + uni total hours
+        
+       3.Total left = Total hours permitted - Total hours allocated**
+        
+       4.Total_hours = credits * (alpha * delta + beta * numStudents) * share + coordinator
 
-@when('the user accesses their cart')
-def step_when_the_user_accesses_their_cart(context):
-    # Access the cart page
-    response = context.client.get('/order/cart/')
-    context.cart_response = response
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/13.png?raw=true)
 
-@then('the cart should be displayed with the correct products and quantities')
-def step_then_the_cart_should_be_displayed_with_the_correct_products_and_quantities(context):
-    # Check the cart response
-    assert context.cart_response.status_code == 200
+## 8.Download totalwork information
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/14.png?raw=true)
 
-@when('the user accesses their order history')
-def step_when_the_user_accesses_their_order_history(context):
-    # Access the order history page
-    context.order_response = context.client.get('/order/')
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/20.png?raw=true)
 
-@then('the order history should display the correct orders with product information')
-def step_then_the_order_history_should_display_the_correct_orders_with_product_information(context):
-    # Check the order history response
-    assert context.order_response.status_code == 200
+## 9.Managing user information
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/15.png?raw=true)
 
-```
-myapp.feature：
-```python
-Feature: Cart and Order Management
+## 10.Viewing user logs
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/16.png?raw=true)
 
-Scenario: Accessing the Cart
-Given a user is logged in
-When the user accesses their cart
-Then the cart should be displayed with the correct products and quantities
+The log contains information such as staff_id, operation log, etc.
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/17.png?raw=true)
 
-Scenario: Accessing Orders
-Given a user is logged in
-When the user accesses their order history
-Then the order history should display the correct orders with product information
-```
+## 11.Permission Related
+Default permissions for each role can be edited in the setting module
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/18.png?raw=true)
 
-environment.py：
-```python
-from behave import fixture, use_fixture
-from django.test import RequestFactory
-from django.test.runner import DiscoverRunner
-import sys
-import os
-from django import setup
-from django.urls import reverse
-from django.test import RequestFactory
-from django.conf import settings
-
-def before_all(context):
-    settings.DEBUG = False
-    context.factory = RequestFactory()
-
-# 获取项目根目录的绝对路径
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-
-# 将项目根目录添加到sys.path
-if project_root not in sys.path:
-    sys.path.append(project_root)
-
-os.environ['DJANGO_SETTINGS_MODULE'] = 'shop.settings'
-setup()
-
-@fixture
-def django_test_runner(context):
-    context.test_runner = DiscoverRunner()
-    context.test_runner.setup_test_environment()
-    context.old_db_config = context.test_runner.setup_databases()
-    context.request_factory = RequestFactory()
-    yield
-    context.test_runner.teardown_databases(context.old_db_config)
-    context.test_runner.teardown_test_environment()
-
-def before_all(context):
-    use_fixture(django_test_runner, context)
-```
-
-最后在manage.py所在目录执行behave就行了
-
-以下是返回结果：
-![example](https://github.com/wangleiz166/studyInAberdeen/blob/main/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230505125939.png)
-
-
+Take the test account as an example, if you don't have permission, you will get the following page
+![enter image description here](https://github.com/wangleiz166/studyInAberdeen/blob/main/19.png?raw=true)
